@@ -17,7 +17,7 @@ const rule = require("../../../lib/rules/public-api-imports"),
 //------------------------------------------------------------------------------
 
 const ruleTester = new RuleTester({
-  parserOptions: { ecmaVersion: 6, sourceType: 'module' }
+  parserOptions: {ecmaVersion: 6, sourceType: 'module'}
 });
 
 const aliasOptions = [
@@ -60,13 +60,13 @@ ruleTester.run("public-api-imports", rule, {
   invalid: [
     {
       code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/model/file.ts'",
-      errors: [{ message: "Absolute imports are only allowed from the Public API (index.ts)"}],
+      errors: [{ message: "Absolute imports are only allowed from Public API (index.ts)"}],
       options: aliasOptions,
     },
     {
       filename: 'C:\\Users\\tim\\Desktop\\javascript\\production_project\\src\\entities\\StoreDecorator.tsx',
       code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing/file.tsx'",
-      errors: [{message: 'Absolute imports are only allowed from the Public API (index.ts)'}],
+      errors: [{message: 'Absolute imports are only allowed from Public API (index.ts)'}],
       options: [{
         alias: '@',
         testFilesPatterns: ['**/*.test.ts', '**/*.test.ts', '**/StoreDecorator.tsx']
