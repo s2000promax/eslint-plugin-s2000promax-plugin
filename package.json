@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-s2000promax-plugin",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Plugin for relative paths",
   "keywords": [
     "eslint",
